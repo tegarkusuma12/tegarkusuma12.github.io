@@ -1,107 +1,93 @@
 # Tegar Maulana Bhakti Kusuma
 
-**Data Scientist · Data Analyst · AI Engineer**
+**Data Scientist · Data Analyst · Data Engineer · AI Engineer**
 
-📧 kusumategar1255@gmail.com · 📱 +62 851-7215-7204 · 📍 Surabaya, Indonesia  
+📧 [kusumategar1255@gmail.com](mailto:kusumategar1255@gmail.com) · 📱 +62 851-7215-7204 · 📍 Surabaya  
 [LinkedIn](https://linkedin.com/in/tegar-kusuma-connect) · [GitHub](https://github.com/tegarkusuma12)
 
 ---
 
 ## Tentang Saya
 
-Mahasiswa **D4 Sains Data Terapan** di Politeknik Elektronika Negeri Surabaya (PENS) dengan fokus pada *machine learning*, *computer vision*, dan *generative AI*. Berpengalaman membangun sistem data *end-to-end* — mulai dari ETL pipeline, pemodelan prediktif, hingga deployment dalam bentuk dashboard interaktif dan REST API.
+Mahasiswa **D4 Sains Data Terapan** di Politeknik Elektronika Negeri Surabaya (PENS) dengan fokus pada analitik data, data warehousing, dan artificial intelligence. Berpengalaman membangun sistem dari ETL pipeline, pemodelan prediktif, hingga deployment ke dashboard dan REST API.
 
 ---
 
-## Keahlian Teknis
+## Keahlian
 
-| Bidang | Teknologi |
-|---|---|
-| **Machine Learning** | XGBoost, Random Forest, Scikit-learn, Time Series Forecasting |
-| **Computer Vision** | YOLOv8, OpenAI CLIP, OpenCV, PyTorch, FAISS |
-| **Generative AI / NLP** | LangChain, Groq LLM API, Prompt Engineering, AI Agent |
-| **Data Engineering** | Python, SQL, PostgreSQL, Supabase, ETL Pipeline, Pandas, NumPy |
-| **Backend & Deployment** | FastAPI, Flask, Docker, REST API, SQLAlchemy |
-| **Visualisasi** | Tableau, Chart.js, Leaflet.js, Matplotlib, Seaborn |
+**Data Science**  
+Machine Learning · NLP · Exploratory Data Analysis · Data Visualization · Sales Forecasting · Prescriptive Analytics
 
----
+**Data Engineering**  
+ETL Pipeline · PostgreSQL · Supabase · APScheduler · Airflow · Docker · SQLAlchemy
 
-## Proyek Terpilih
+**LLM**  
+LangChain · Groq API · Prompt Engineering · AI Agent (Tool-Calling)
 
-### 1. REGOKEMON — Pokemon Card Value Analytic Tool 🎴
+**Backend**  
+Python · FastAPI · Flask · REST API · Pandas · NumPy
 
-> Dual-Model Computer Vision & Estimasi Harga Pasar Wajar untuk Marketplace
-
-🔗 [GitHub Repository](https://github.com/Bejochan/pokemon-card-value-analytic-tool)
-
-Sistem analitika berbasis **Dual-Model Computer Vision** untuk membantu penjual & pembeli kartu Pokémon di marketplace.
-
-- **Model 1 — Card Identifier:** OpenAI CLIP (ViT-B-32) + FAISS vector index untuk identifikasi instan (<10ms) di antara **20.617 jenis kartu**.
-- **Model 2 — Condition Grader:** YOLOv8 untuk deteksi cacat fisik kartu (lecet, tertekuk, aus pinggir) secara otomatis dan objektif.
-- **Analytics Engine:** Formula valuasi *Fair Market Price* yang menghitung deviasi harga marketplace dan menghasilkan sinyal transaksi **BUY / HOLD / SELL**.
-
-**Tech:** `PyTorch` `OpenAI CLIP` `YOLOv8` `FAISS` `FastAPI` `React` `Supabase`
+**Tools**  
+Git · DagsHub · Jupyter Notebook
 
 ---
 
-### 2. SAKU — Smart POS & AI Assistant 🤖
-
-> Sistem Kasir & Akuntansi Cerdas Berbasis LLM Agent untuk UMKM
-
-🔗 [GitHub Repository](https://github.com/tegarkusuma12/saku-smart-pos)
-
-Platform POS dan business analytics dilengkapi **AI Chatbot berbahasa Indonesia** menggunakan LangChain Agent dengan 9 custom tools. Pelaku UMKM bisa mencatat keuangan menggunakan bahasa sehari-hari.
-
-```
-Kamu: bayar listrik 150rb
-SAKU: ✅ Pengeluaran dicatat! 💸 Rp150.000 🏷️ listrik
-
-Kamu: besok butuh stok apa?
-SAKU: 📦 Rekomendasi Restock:
-      🔴 Chitato — stok 5, restock 17 unit
-```
-
-- **End-to-End Data Pipeline:** Synthetic data generation (120 hari), ETL (SQLite → CSV), EDA, dan Sales Forecasting.
-- **Prescriptive Analytics:** Rekomendasi restock otomatis berdasarkan forecast demand + current stock (urgency: KRITIS / SEGERA / PERLU / AMAN).
-- **Sales Forecasting:** Model XGBoost / Random Forest dengan TimeSeriesSplit evaluation.
-
-**Tech:** `LangChain` `Groq LLM` `XGBoost` `FastAPI` `SQLAlchemy` `Docker`
+## Proyek
 
 ---
 
-### 3. Prediksi ISPU Jawa Timur 🌍
+### 🌍 Prediksi ISPU Jawa Timur
 
-> Dashboard Prediksi Kualitas Udara Real-time dengan ML Pipeline
+[GitHub](https://github.com/tegarkusuma12/Web-ISPU) · [Live Demo](https://web-prediksi-ispu.vercel.app/)
 
-🔗 [GitHub Repository](https://github.com/tegarkusuma12/Web-ISPU)
+Belum ada sistem yang mampu memproyeksikan kualitas udara secara real-time untuk seluruh wilayah Jawa Timur. Proyek ini membangun sistem prediksi kualitas udara untuk 38 Kab/Kota di Jawa Timur yang menggabungkan data cuaca aktual, model prediksi XGBoost, dan dashboard peta interaktif.
 
-Sistem peringatan dini (*early warning system*) kualitas udara di **38 Kab/Kota Jawa Timur** yang memadukan data real-time, model prediksi ML, dan visualisasi choropleth map interaktif.
 
-- **Automated Rolling Horizon Pipeline:** APScheduler (cron per jam) menarik data dari OpenWeather API → Supabase PostgreSQL → menjalankan inferensi ML otomatis.
-- **XGBoost Multi-Output:** Memprediksi konsentrasi 6 polutan (PM2.5, PM10, SO2, CO, NO2, O3) hingga **24 jam ke depan**.
-- **Kalkulator ISPU Kemenlhk:** Implementasi standar P.14/2020 dengan aturan minimal 18 jam data valid.
-- **Interactive Dashboard:** Leaflet.js choropleth map + Chart.js + fitur Time-Slider untuk melihat proyeksi +0 hingga +24 jam.
+- Merancang dan membangun **automated data pipeline** menggunakan APScheduler (cron per jam) untuk menarik data dari OpenWeather API dan menyimpannya ke Supabase PostgreSQL secara otomatis.
+- Melakukan **feature engineering** berbasis deret waktu (lag features, rolling statistics) dan melatih model **XGBoost Multi-Output** untuk memproyeksikan 6 parameter polutan (PM2.5, PM10, SO2, CO, NO2, O3) hingga 24 jam ke depan.
+- Mengimplementasikan kalkulator **ISPU standar Kemenlhk** (P.14/2020) untuk konversi konsentrasi polutan menjadi indeks kualitas udara.
+- Membangun **REST API** menggunakan Flask dan merancang skema database dengan SQLAlchemy.
+- Membuat **choropleth dashboard** menggunakan Leaflet.js dan Chart.js dengan fitur time-slider untuk melihat proyeksi +0 hingga +24 jam.
 
-**Tech:** `XGBoost` `Flask` `Supabase` `APScheduler` `Leaflet.js` `Chart.js`
+**Tech:** `Python` `XGBoost` `Flask` `Supabase` `APScheduler` `Leaflet.js` `Chart.js` `Docker`
+
+---
+
+### 🤖 SAKU — Smart POS & AI Assistant
+
+[GitHub](https://github.com/tegarkusuma12/saku-smart-pos) · [Live Demo](https://saku-smart-pos-app.vercel.app/)
+
+Pelaku UMKM seperti pemilik warung dan pedagang kecil sering kesulitan mencatat keuangan karena aplikasi kasir yang ada terlalu rumit. SAKU hadir sebagai platform Point of Sale dan business analytics yang dilengkapi AI chatbot berbahasa Indonesia — cukup ketik *"bayar listrik 150rb"* untuk mencatat transaksi, atau tanya *"besok butuh stok apa?"* untuk mendapat rekomendasi restock berbasis prediksi ML.
+
+
+- Melakukan **EDA** (distribusi revenue, pola weekday vs weekend) dan melatih model **sales forecasting** menggunakan XGBoost dan Random Forest dengan evaluasi TimeSeriesSplit.
+- Membangun modul **prescriptive analytics** yang mengubah output forecast menjadi rekomendasi restock (level urgensi: KRITIS / SEGERA / PERLU / AMAN).
+- Mengembangkan **AI chatbot** menggunakan LangChain Agent dengan Groq LLM API dan 9 custom tools (catat pengeluaran, prediksi penjualan, cek hutang, rekomendasi restock, dll).
+- Membangun backend **FastAPI** dan meng-containerize seluruh sistem menggunakan Docker.
+
+**Tech:** `Python` `LangChain` `Groq LLM` `XGBoost` `FastAPI` `SQLAlchemy` `Docker`
+
+---
+
+### 🎴 REGOKEMON — Pokemon Card Value Analytic Tool
+
+[GitHub](https://github.com/Bejochan/pokemon-card-value-analytic-tool)
+
+Transaksi kartu Pokémon di marketplace rawan *mispricing* — sulit mengidentifikasi jenis kartu dari 20.000+ varian, menilai kondisi fisik secara objektif, dan mengetahui harga pasar wajar. REGOKEMON menyelesaikan ini dengan dual-model computer vision yang mengenali kartu secara instan, menilai kondisinya, lalu menghitung harga wajar dan memberikan sinyal transaksi.
+
+
+- Merancang arsitektur sistem dan **pipeline identifikasi kartu** menggunakan OpenAI CLIP (ViT-B-32) + FAISS vector index untuk pencarian visual di antara 20.617 kartu referensi.
+- Mengintegrasikan model **YOLOv8** untuk deteksi cacat fisik kartu (lecet, tertekuk, aus pinggir) sebagai condition grader.
+- Membangun **analytics engine** dengan formula valuasi harga pasar wajar dan logika sinyal transaksi BUY/HOLD/SELL.
+- Merancang **daily price tracker** menggunakan GitHub Actions cron job untuk sinkronisasi harga dari pokemontcg.io ke Supabase.
+
+**Tech:** `PyTorch` `OpenAI CLIP` `YOLOv8` `FAISS` `FastAPI` `React` `Supabase` `GitHub Actions`
 
 ---
 
 ## Pendidikan
 
-### D4 Sains Data Terapan — PENS
-**Politeknik Elektronika Negeri Surabaya** · Juli 2024 — Saat ini  
-IPK: **3.64**
+**D4 Sains Data Terapan** — Politeknik Elektronika Negeri Surabaya (PENS)  
+Juli 2024 — Saat ini · IPK: **3.64**
 
-### Sertifikasi
-**Mastering AI Bootcamp** — Skill Academy by Ruangguru
-
----
-
-## Kontak
-
-Tertarik untuk berkolaborasi atau menawarkan kesempatan? Hubungi saya!
-
-- 📧 Email: [kusumategar1255@gmail.com](mailto:kusumategar1255@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/tegar-kusuma-connect](https://linkedin.com/in/tegar-kusuma-connect)
-- 🐙 GitHub: [github.com/tegarkusuma12](https://github.com/tegarkusuma12)
-- 📱 Telepon: +62 851-7215-7204
+**[Mastering AI Bootcamp](https://drive.google.com/file/d/142wzAxvX8PR5QeLlad8bZXdaPxklplww/view)** — Skill Academy by Ruangguru
