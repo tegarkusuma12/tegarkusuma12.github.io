@@ -1,7 +1,3 @@
-# Tegar Maulana Bhakti Kusuma
-
-**Data Scientist · Data Analyst · Data Engineer · AI Engineer**
-
 📧 [kusumategar1255@gmail.com](mailto:kusumategar1255@gmail.com) · 📱 +62 851-7215-7204 · 📍 Surabaya  
 [LinkedIn](https://linkedin.com/in/tegar-kusuma-connect) · [GitHub](https://github.com/tegarkusuma12)
 
