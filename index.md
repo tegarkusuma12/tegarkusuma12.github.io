@@ -43,13 +43,13 @@ Git · DagsHub · Jupyter Notebook
 Belum ada sistem yang mampu memproyeksikan kualitas udara secara real-time untuk seluruh wilayah Jawa Timur. Proyek ini membangun sistem prediksi kualitas udara untuk 38 Kab/Kota di Jawa Timur yang menggabungkan data cuaca aktual, model prediksi XGBoost, dan dashboard peta interaktif.
 
 
-- Merancang dan membangun **automated data pipeline** menggunakan APScheduler (cron per jam) untuk menarik data dari OpenWeather API dan menyimpannya ke Supabase PostgreSQL secara otomatis.
-- Melakukan **feature engineering** berbasis deret waktu (lag features, rolling statistics) dan melatih model **XGBoost Multi-Output** untuk memproyeksikan 6 parameter polutan (PM2.5, PM10, SO2, CO, NO2, O3) hingga 24 jam ke depan.
-- Mengimplementasikan kalkulator **ISPU standar Kemenlhk** (P.14/2020) untuk konversi konsentrasi polutan menjadi indeks kualitas udara.
-- Membangun **REST API** menggunakan Flask dan merancang skema database dengan SQLAlchemy.
-- Membuat **choropleth dashboard** menggunakan Leaflet.js dan Chart.js dengan fitur time-slider untuk melihat proyeksi +0 hingga +24 jam.
+- Merancang dan membangun automated data pipeline menggunakan APScheduler untuk menarik data dari OpenWeather API dan menyimpannya ke Supabase PostgreSQL secara otomatis.
+- Melakukan feature engineering berbasis deret waktu dan melatih model XGBoost Multi-Output untuk memproyeksikan 6 parameter polutan hingga 24 jam ke depan.
+- Mengimplementasikan kalkulator ISPU standar Kemenlhk P.14/2020 untuk konversi konsentrasi polutan menjadi indeks kualitas udara.
+- Membangun REST API menggunakan Flask dan merancang skema database dengan SQLAlchemy.
+- Membuat choropleth dashboard menggunakan Leaflet.js dan Chart.js dengan fitur time-slider untuk melihat proyeksi +0 hingga +24 jam.
 
-**Tech:** `Python` `XGBoost` `Flask` `Supabase` `APScheduler` `Leaflet.js` `Chart.js` `Docker`
+Tech: Python · XGBoost · Flask · Supabase · APScheduler · Leaflet.js · Chart.js · Docker
 
 ---
 
@@ -60,12 +60,12 @@ Belum ada sistem yang mampu memproyeksikan kualitas udara secara real-time untuk
 Pelaku UMKM seperti pemilik warung dan pedagang kecil sering kesulitan mencatat keuangan karena aplikasi kasir yang ada terlalu rumit. SAKU hadir sebagai platform Point of Sale dan business analytics yang dilengkapi AI chatbot berbahasa Indonesia — cukup ketik *"bayar listrik 150rb"* untuk mencatat transaksi, atau tanya *"besok butuh stok apa?"* untuk mendapat rekomendasi restock berbasis prediksi ML.
 
 
-- Melakukan **EDA** (distribusi revenue, pola weekday vs weekend) dan melatih model **sales forecasting** menggunakan XGBoost dan Random Forest dengan evaluasi TimeSeriesSplit.
-- Membangun modul **prescriptive analytics** yang mengubah output forecast menjadi rekomendasi restock (level urgensi: KRITIS / SEGERA / PERLU / AMAN).
-- Mengembangkan **AI chatbot** menggunakan LangChain Agent dengan Groq LLM API dan 9 custom tools (catat pengeluaran, prediksi penjualan, cek hutang, rekomendasi restock, dll).
-- Membangun backend **FastAPI** dan meng-containerize seluruh sistem menggunakan Docker.
+- Melakukan EDA dan melatih model sales forecasting menggunakan XGBoost dan Random Forest dengan evaluasi TimeSeriesSplit.
+- Membangun modul prescriptive analytics yang mengubah output forecast menjadi rekomendasi restock otomatis.
+- Mengembangkan AI chatbot menggunakan LangChain Agent dengan Groq LLM API dan 9 custom tools.
+- Membangun backend FastAPI dan meng-containerize seluruh sistem menggunakan Docker.
 
-**Tech:** `Python` `LangChain` `Groq LLM` `XGBoost` `FastAPI` `SQLAlchemy` `Docker`
+Tech: Python · LangChain · Groq LLM · XGBoost · FastAPI · SQLAlchemy · Docker
 
 ---
 
@@ -76,12 +76,12 @@ Pelaku UMKM seperti pemilik warung dan pedagang kecil sering kesulitan mencatat 
 Transaksi kartu Pokémon di marketplace rawan *mispricing* — sulit mengidentifikasi jenis kartu dari 20.000+ varian, menilai kondisi fisik secara objektif, dan mengetahui harga pasar wajar. REGOKEMON menyelesaikan ini dengan dual-model computer vision yang mengenali kartu secara instan, menilai kondisinya, lalu menghitung harga wajar dan memberikan sinyal transaksi.
 
 
-- Merancang arsitektur sistem dan **pipeline identifikasi kartu** menggunakan OpenAI CLIP (ViT-B-32) + FAISS vector index untuk pencarian visual di antara 20.617 kartu referensi.
-- Mengintegrasikan model **YOLOv8** untuk deteksi cacat fisik kartu (lecet, tertekuk, aus pinggir) sebagai condition grader.
-- Membangun **analytics engine** dengan formula valuasi harga pasar wajar dan logika sinyal transaksi BUY/HOLD/SELL.
-- Merancang **daily price tracker** menggunakan GitHub Actions cron job untuk sinkronisasi harga dari pokemontcg.io ke Supabase.
+- Merancang arsitektur sistem dan pipeline identifikasi kartu menggunakan OpenAI CLIP + FAISS vector index untuk pencarian visual di antara 20.617 kartu referensi.
+- Mengintegrasikan model YOLOv8 untuk deteksi cacat fisik kartu sebagai condition grader.
+- Membangun analytics engine dengan formula valuasi harga pasar wajar dan logika sinyal transaksi.
+- Merancang daily price tracker menggunakan GitHub Actions cron job untuk sinkronisasi harga dari pokemontcg.io ke Supabase.
 
-**Tech:** `PyTorch` `OpenAI CLIP` `YOLOv8` `FAISS` `FastAPI` `React` `Supabase` `GitHub Actions`
+Tech: PyTorch · OpenAI CLIP · YOLOv8 · FAISS · FastAPI · React · Supabase · GitHub Actions
 
 ---
 
