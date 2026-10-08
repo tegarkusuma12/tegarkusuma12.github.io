@@ -67,7 +67,13 @@
                     <a href="#portofolio" class="text-slate-600 hover:text-primary font-medium transition-colors">Portofolio</a>
                     <a href="#pengalaman" class="text-slate-600 hover:text-primary font-medium transition-colors">Pendidikan & Pengalaman</a>
                     <a href="#sertifikat" class="text-slate-600 hover:text-primary font-medium transition-colors">Sertifikat</a>
-                    <a href="#kontak" class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-secondary transition-colors shadow-lg shadow-primary/30">Kontak</a>
+                    <div class="flex items-center gap-4">
+                        <a href="#kontak" class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-secondary transition-colors shadow-lg shadow-primary/30">Kontak</a>
+                        <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-full border border-slate-200">
+                            <a href="#" onclick="setLang('id')" class="btn-lang-id px-3 py-1 bg-white shadow-sm rounded-full text-xs font-bold text-primary transition-all" class="px-3 py-1 bg-white shadow-sm rounded-full text-xs font-bold text-primary transition-all">ID</a>
+                            <a href="#" onclick="setLang('en')" class="btn-lang-en px-3 py-1 rounded-full text-xs font-bold text-slate-500 hover:text-slate-800 transition-all" class="px-3 py-1 rounded-full text-xs font-bold text-slate-500 hover:text-slate-800 transition-all">EN</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -84,6 +90,14 @@
             <a href="#pengalaman" class="text-slate-600 font-medium">Pendidikan</a>
             <a href="#sertifikat" class="text-slate-600 font-medium">Sertifikat</a>
             <a href="#kontak" class="text-primary font-medium">Kontak</a>
+            <div class="h-px bg-slate-100 my-2"></div>
+            <div class="flex items-center gap-2">
+                <span class="text-sm font-medium text-slate-500">Bahasa:</span>
+                <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-full border border-slate-200">
+                    <a href="#" onclick="setLang('id')" class="btn-lang-id px-3 py-1 bg-white shadow-sm rounded-full text-xs font-bold text-primary transition-all" class="px-3 py-1 bg-white shadow-sm rounded-full text-xs font-bold text-primary transition-all">ID</a>
+                    <a href="#" onclick="setLang('en')" class="btn-lang-en px-3 py-1 rounded-full text-xs font-bold text-slate-500 hover:text-slate-800 transition-all" class="px-3 py-1 rounded-full text-xs font-bold text-slate-500 hover:text-slate-800 transition-all">EN</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -109,12 +123,24 @@
                         <i class="fas fa-paper-plane"></i> Hubungi Saya
                     </a>
                     <div class="flex gap-2 justify-center md:justify-start">
-                        <a href="CV-ATS-Indo-Oktober.pdf" target="_blank" class="bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-full font-medium hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
-                            <i class="fas fa-eye"></i> Lihat CV
-                        </a>
-                        <a href="CV-ATS-Indo-Oktober.pdf" download="CV-Tegar-Kusuma.pdf" class="bg-white text-slate-700 border border-slate-200 w-12 h-12 rounded-full flex items-center justify-center hover:bg-slate-50 transition-all" title="Unduh CV">
-                            <i class="fas fa-download"></i>
-                        </a>
+                        <div class="relative group">
+                            <button class="bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-full font-medium hover:bg-slate-50 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                                <i class="fas fa-file-pdf"></i> CV / Resume <i class="fas fa-chevron-down text-[10px] ml-1 transition-transform group-hover:rotate-180"></i>
+                            </button>
+                            <div class="absolute top-full left-0 mt-2 w-52 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 overflow-hidden">
+                                <div class="p-1 flex flex-col text-left">
+                                    <div class="text-[10px] font-bold text-slate-400 px-3 py-2 uppercase tracking-wider">Bahasa Indonesia</div>
+                                    <a href="CV-ATS-Indo-Oktober.pdf" target="_blank" class="flex items-center gap-3 px-3 py-2 hover:bg-slate-50 hover:text-primary rounded-lg text-sm text-slate-700 transition-colors"><i class="fas fa-eye w-4 text-center"></i> Lihat CV</a>
+                                    <a href="CV-ATS-Indo-Oktober.pdf" download="CV-Tegar-Kusuma-ID.pdf" class="flex items-center gap-3 px-3 py-2 hover:bg-slate-50 hover:text-primary rounded-lg text-sm text-slate-700 transition-colors"><i class="fas fa-download w-4 text-center"></i> Unduh CV</a>
+                                    
+                                    <div class="h-px bg-slate-100 my-1 mx-2"></div>
+                                    
+                                    <div class="text-[10px] font-bold text-slate-400 px-3 py-2 uppercase tracking-wider">English</div>
+                                    <a href="CV-English.pdf" target="_blank" class="flex items-center gap-3 px-3 py-2 hover:bg-slate-50 hover:text-primary rounded-lg text-sm text-slate-700 transition-colors"><i class="fas fa-eye w-4 text-center"></i> View Resume</a>
+                                    <a href="CV-English.pdf" download="CV-Tegar-Kusuma-EN.pdf" class="flex items-center gap-3 px-3 py-2 hover:bg-slate-50 hover:text-primary rounded-lg text-sm text-slate-700 transition-colors"><i class="fas fa-download w-4 text-center"></i> Download</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-8 flex items-center justify-center md:justify-start gap-4">
@@ -571,82 +597,366 @@
     </footer>
 
     <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('nav-scrolled');
-                navbar.classList.remove('py-4');
-                navbar.classList.add('py-3');
-            } else {
-                navbar.classList.remove('nav-scrolled');
-                navbar.classList.remove('py-3');
-                navbar.classList.add('py-4');
-            }
-        });
 
-        // Mobile menu toggle
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            navbar.classList.add('nav-scrolled', 'py-3');
+            navbar.classList.remove('py-4');
+        } else {
+            navbar.classList.remove('nav-scrolled', 'py-3');
+            navbar.classList.add('py-4');
+        }
+    });
+
+    const i18n = {
+        "Beranda": "Home",
+        "Tentang Saya": "About Me",
+        "Portofolio": "Portfolio",
+        "Pendidikan & Pengalaman": "Education & Experience",
+        "Pendidikan": "Education",
+        "Sertifikat": "Certificates",
+        "Kontak": "Contact",
+        "Bahasa:": "Language:",
+        "Halo, Saya": "Hello, I am",
+        "Mahasiswa": "Student",
+        "Hubungi Saya": "Contact Me",
+        "Lihat CV": "View Resume",
+        "Unduh CV": "Download CV",
+        "Keahlian Teknis": "Technical Skills",
+        "Bahasa Pemrograman": "Programming Languages",
+        "Alat & Framework": "Tools & Frameworks",
+        "Portofolio Proyek": "Project Portfolio",
+        "Semua": "All",
+        "Proyek Tim": "Team Project",
+        "Proyek Individu": "Individual Project",
+        "Sebagai:": "Role:",
+        "Pengembang Backend": "Backend Developer",
+        "Ketua Tim & Pengembang Fullstack": "Team Lead & Fullstack Developer",
+        "Lihat Kode": "Source Code",
+        "Lihat Demo": "Live Demo",
+        "Buka": "Open",
+        "Buka Proyek": "Open Project",
+        "Pengalaman Organisasi": "Organizational Experience",
+        "Saat Ini": "Present",
+        "Anggota Divisi Keilmuan": "Science Division Member",
+        "Koordinator Perangkat": "Equipment Coordinator",
+        "Panitia": "Committee",
+        "Sertifikat & Penghargaan": "Certificates & Awards",
+        "Sertifikasi & Pelatihan": "Certifications & Training",
+        "Prestasi & Kompetisi": "Achievements & Competitions",
+        "Organisasi & Kepanitiaan": "Organizations & Committees",
+        "Pelatihan": "Training",
+        "Organisasi": "Organization",
+        "Kepanitiaan": "Committee",
+        "Sertifikasi Keahlian": "Professional Certification",
+        "Kompetisi Data": "Data Competition",
+        "Dapatkan In Touch": "Get In Touch",
+        "Kirim Email": "Send Email",
+        "Terhubung di LinkedIn": "Connect on LinkedIn",
+        "Lokasi": "Location",
+        "Masalah:": "Problem:",
+        "Solusi:": "Solution:",
+        "Peran saya:": "My Role:",
+        "Proyek Tim (3 Orang)": "Team Project (3 People)",
+        "Proyek Tim (4 Orang)": "Team Project (4 People)",
+        "Proyek Individu": "Individual Project",
+        "Prediksi ISPU Jawa Timur": "East Java ISPU Prediction",
+        "Dashboard Monitoring ISPU": "ISPU Monitoring Dashboard",
+        "Pokemon Card Analytic Tool": "Pokemon Card Analytic Tool",
+        "Sistem Akuntansi Keuangan (SAKU)": "Financial Accounting System (SAKU)",
+        "Perkenalkan...": "Introduce...",
+        "D4 Sains Data Terapan": "Applied Data Science (B.A.Sc)",
+        "Sekolah Menengah Kejuruan": "Vocational High School",
+        "Rekayasa Perangkat Lunak": "Software Engineering",
+        "Saat ini": "Present",
+        "Keahlian Utama": "Core Skills",
+        "Praktik Kerja Lapangan": "Internship",
+        "Mari Berkolaborasi!": "Let\'s Collaborate!",
+
+        "Saya mahasiswa": "I am a student",
+        "Lihat Semua Repositori": "View All Repositories",
+        "Lihat GitHub": "View GitHub",
+        "Pengalaman": "Experience",
+        "Kerja Praktik (PKL)": "Internship",
+        "Admin Marketplace": "Marketplace Admin",
+        "Badan Pengawas Anggota (BPA)": "Member Supervisory Board (BPA)",
+        "Badan Pengawas Anggota HIMIT PENS": "HIMIT PENS Member Supervisory Board",
+        "Panitia Data Science Expo PENS 2026": "Data Science Expo PENS 2026 Committee",
+        "Panitia Dynamic Jurusan HIMIT 2024": "HIMIT Department Dynamic 2024 Committee",
+        "Himpunan Mahasiswa IT (HIMIT)": "IT Student Association (HIMIT)",
+        "Bahasa Indonesia": "Indonesian",
+        "English": "English",
+        "CV / Resume": "CV / Resume"
+
+
+    };
+    
+    // Also store reverse mapping
+    const i18n_rev = {};
+    for(let k in i18n) {
+        i18n_rev[i18n[k]] = k;
+    }
+
+    const long_texts = {
+        "id_desc": "fokus pada <strong>Analisis Data</strong>, <strong>Machine Learning</strong>, dan <strong>Pengembangan Web</strong>. Saya senang mengubah data menjadi wawasan yang berguna dan membangun aplikasi yang memberikan solusi nyata.",
+        "en_desc": "focused on <strong>Data Analysis</strong>, <strong>Machine Learning</strong>, and <strong>Web Development</strong>. I enjoy turning data into actionable insights and building applications that provide real solutions.",
+        
+        "id_about1": "Saya adalah mahasiswa tingkat akhir Teknik Informatika di Politeknik Elektronika Negeri Surabaya (PENS). Saya memiliki ketertarikan yang mendalam terhadap <strong>Data Science</strong> dan <strong>Artificial Intelligence</strong>.",
+        "en_about1": "I am a final-year Informatics Engineering student at Electronic Engineering Polytechnic Institute of Surabaya (PENS). I have a deep interest in <strong>Data Science</strong> and <strong>Artificial Intelligence</strong>.",
+        
+        "id_about2": "Selama masa kuliah, saya aktif mengembangkan kemampuan analitis dan pemrograman, serta berpartisipasi dalam berbagai proyek kolaboratif maupun kompetisi nasional.",
+        "en_about2": "During my studies, I actively developed analytical and programming skills, and participated in various collaborative projects and national competitions.",
+        
+        "id_about3": "Selain di bidang teknis, saya juga menikmati pengalaman berorganisasi untuk mengasah kemampuan komunikasi, kepemimpinan, dan kerja sama tim.",
+        "en_about3": "Besides technical fields, I also enjoy organizational experiences to hone my communication, leadership, and teamwork skills.",
+        
+        "id_contact": "Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui email atau LinkedIn.",
+        "en_contact": "Interested in collaborating or have any questions? Feel free to reach out via email or LinkedIn.",
+        "id_ispu_prob": "Sistem pemantauan indeks standar pencemar udara (ISPU) yang masih tersebar dan sulit dianalisis trennya.",
+        "en_ispu_prob": "Air pollution standard index (ISPU) monitoring systems that are scattered and hard to analyze for trends.",
+        "id_ispu_sol": "Pipeline data dan machine learning yang memprediksi enam jenis polutan untuk 38 kabupaten/kota di Jawa Timur. Hasilnya divisualisasikan dalam dashboard spasial interaktif.",
+        "en_ispu_sol": "Data and machine learning pipelines that predict six types of pollutants for 38 cities/regencies in East Java. The results are visualized in an interactive spatial dashboard.",
+        "id_ispu_role": "Membangun model XGBoost, merancang pipeline ETL otomatis, dan melakukan transformasi data polutan.",
+        "en_ispu_role": "Built the XGBoost model, designed automated ETL pipelines, and performed pollutant data transformations.",
+        
+        "id_poke_prob": "Kolektor kartu Pokemon di Indonesia kesulitan menentukan harga pasar kartu mereka karena tidak ada referensi harga dan sistem penilai grading lokal.",
+        "en_poke_prob": "Pokemon card collectors in Indonesia struggle to price their cards due to the lack of local price references and grading systems.",
+        "id_poke_sol": "Sistem dengan dua model computer vision: identifikasi kartu (OpenAI CLIP + FAISS) dan penilai kondisi fisik (YOLOv8), ditambah analytics engine untuk valuasi harga dan sinyal BUY/HOLD/SELL.",
+        "en_poke_sol": "System with two computer vision models: card identification (OpenAI CLIP + FAISS) and physical condition grader (YOLOv8), plus an analytics engine for price valuation and BUY/HOLD/SELL signals.",
+        "id_poke_role": "Membangun end-to-end backend, mengintegrasikan model YOLO dan CLIP, serta merancang arsitektur database.",
+        "en_poke_role": "Built the end-to-end backend, integrated YOLO and CLIP models, and designed the database architecture.",
+        
+        "id_saku_prob": "Pelaku UMKM sering kesulitan mencatat keuangan karena aplikasi kasir yang ada terlalu rumit.",
+        "en_saku_prob": "MSME owners often struggle with financial bookkeeping because existing cashier apps are too complex.",
+        "id_saku_sol": "Platform Point of Sale dan business analytics dengan chatbot berbahasa Indonesia. Pengguna cukup mengetik \"bayar listrik 150rb\" untuk mencatat pengeluaran, atau \"besok butuh stok apa?\" untuk mendapat rekomendasi restock berbasis prediksi penjualan.",
+        "en_saku_sol": "A Point of Sale and business analytics platform with an Indonesian chatbot. Users simply type \"pay electricity 150k\" to log expenses, or \"what stock do we need tomorrow?\" to get restock recommendations based on sales predictions.",
+        
+        "id_edu_pens": "Fokus studi saya di analitik data, data warehousing, dan artificial intelligence.",
+        "en_edu_pens": "My studies focus on data analytics, data warehousing, and artificial intelligence.",
+        
+        "id_edu_smk": "Fokus pada dasar-dasar pemrograman, rekayasa perangkat lunak, dan pengembangan aplikasi web/mobile.",
+        "en_edu_smk": "Focused on programming fundamentals, software engineering, and web/mobile application development.",
+        
+        "id_skill_p": "Saya terbiasa membangun sistem data dari awal hingga tahap produksi. Pekerjaan saya meliputi pembuatan arsitektur backend, perancangan ETL pipeline, pelatihan model machine learning, sampai pembuatan dashboard analitik untuk memvisualisasikan hasilnya.",
+        "en_skill_p": "I am accustomed to building data systems from scratch to production. My work includes backend architecture, ETL pipeline design, machine learning model training, and analytical dashboard creation to visualize results.",
+
+        "id_bootcamp": "Program intensif pengembangan skill AI, meliputi LLM, Prompt Engineering, dan integrasi AI pada aplikasi.",
+        "en_bootcamp": "Intensive AI skill development program, including LLM, Prompt Engineering, and AI integration in apps.",
+
+        "id_open": "Saya selalu terbuka untuk mendiskusikan peluang kerja, proyek freelance, atau sekadar berbagi insight tentang data science dan AI.",
+        "en_open": "I am always open to discussing job opportunities, freelance projects, or just sharing insights about data science and AI.",
+        
+        "id_achieve_desc": "Kumpulan pencapaian, sertifikasi kompetensi, serta pengalaman organisasi dan kepanitiaan.",
+        "en_achieve_desc": "A collection of achievements, professional certifications, as well as organizational and committee experiences.",
+        
+        "id_ispu_prob2": "Fluktuasi polusi harian sulit diantisipasi oleh masyarakat dan pembuat kebijakan. Ketiadaan peringatan dini menunda tindakan preventif saat kualitas udara memburuk.",
+        "en_ispu_prob2": "Daily pollution fluctuations are difficult for the public and policymakers to anticipate. The lack of early warning delays preventive action when air quality worsens.",
+        
+        "id_poke_prob2": "Transaksi kartu Pok&eacute;mon rawan <em>mispricing</em> akibat sulitnya identifikasi dari puluhan ribu varian dan ketidakpastian dalam menilai kondisi fisik kartu.",
+        "en_poke_prob2": "Pok&eacute;mon card transactions are prone to mispricing due to the difficulty of identifying tens of thousands of variants and the uncertainty in assessing physical card conditions.",
+        
+        "id_bpa_role": "Bertanggung jawab dalam pengawasan kinerja dan evaluasi program kerja pengurus himpunan.",
+        "en_bpa_role": "Responsible for monitoring performance and evaluating the association board's work programs.",
+        
+        "id_admin_role": "Bertugas mengelola transaksi penjualan, memantau ketersediaan stok, dan menangani interaksi dengan pelanggan di platform marketplace.",
+        "en_admin_role": "In charge of managing sales transactions, monitoring stock availability, and handling customer interactions on marketplace platforms.",
+        
+        "id_hero_desc": "Membangun sistem data end-to-end, dari ETL pipeline dan pemodelan prediktif machine learning sampai deployment ke dashboard interaktif dan REST API.",
+        "en_hero_desc": "Building end-to-end data systems, from ETL pipelines and predictive machine learning modeling to deployment on interactive dashboards and REST APIs.",
+        
+        "id_gpa": "IPK: 3.64. Berfokus pada Data Warehousing, Machine Learning, dan Artificial Intelligence.",
+        "en_gpa": "GPA: 3.64. Focusing on Data Warehousing, Machine Learning, and Artificial Intelligence.",
+        
+        "id_saku_role2": "Mengerjakan <em>end-to-end</em> (arsitektur, LLM agent, API backend, dan model <em>forecasting</em>).",
+        "en_saku_role2": "Developed end-to-end (architecture, LLM agents, backend APIs, and forecasting models).",
+        
+        "id_poke_role2": "Bertanggung jawab pada analisis data, merancang fitur <em>pricing</em> harga, dan integrasi model deteksi kondisi kartu.",
+        "en_poke_role2": "Responsible for data analysis, designing pricing features, and integrating the card condition detection model.",
+        
+        "id_edu_pens_full": "di Politeknik Elektronika Negeri Surabaya (PENS). Fokus studi saya di analitik data, data warehousing, dan artificial intelligence.",
+        "en_edu_pens_full": "at Electronic Engineering Polytechnic Institute of Surabaya (PENS). My studies focus on data analytics, data warehousing, and artificial intelligence.",
+        
+        "id_smk_full": "Fokus pada dasar-dasar pemrograman, rekayasa perangkat lunak, dan pengembangan aplikasi web/mobile.",
+        "en_smk_full": "Focused on programming fundamentals, software engineering, and web/mobile application development.",
+        
+        "id_skill_p_full": "Saya terbiasa membangun sistem data dari awal hingga tahap produksi. Pekerjaan saya meliputi pembuatan arsitektur backend, perancangan ETL pipeline, pelatihan model machine learning, sampai pembuatan dashboard analitik untuk memvisualisasikan hasilnya.",
+        "en_skill_p_full": "I am accustomed to building data systems from scratch to production. My work includes backend architecture, ETL pipeline design, machine learning model training, and analytical dashboard creation to visualize results.",
+        
+        "id_bootcamp_full": "Program intensif pengembangan skill AI, meliputi LLM, Prompt Engineering, dan integrasi AI pada aplikasi.",
+        "en_bootcamp_full": "Intensive AI skill development program, including LLM, Prompt Engineering, and AI integration in apps."
+
+
+    };
+
+    let currentLang = 'id';
+
+    function setLang(lang) {
+        if(lang === currentLang) return;
+        
+        const dict = lang === 'en' ? i18n : i18n_rev;
+        
+        // Translate all text nodes
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+        while(node = walker.nextNode()) {
+            let text = node.nodeValue.trim();
+            if(dict[text]) {
+                node.nodeValue = node.nodeValue.replace(text, dict[text]);
+            }
+        }
+        
+        // Translate long HTML texts
+        if(lang === 'en') {
+document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_desc, long_texts.en_desc);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_about1, long_texts.en_about1);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_about2, long_texts.en_about2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_about3, long_texts.en_about3);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_contact, long_texts.en_contact);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_ispu_prob, long_texts.en_ispu_prob);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_ispu_sol, long_texts.en_ispu_sol);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_ispu_role, long_texts.en_ispu_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_poke_prob, long_texts.en_poke_prob);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_poke_sol, long_texts.en_poke_sol);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_poke_role, long_texts.en_poke_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_saku_prob, long_texts.en_saku_prob);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_saku_sol, long_texts.en_saku_sol);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_edu_pens, long_texts.en_edu_pens);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_edu_smk, long_texts.en_edu_smk);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_skill_p, long_texts.en_skill_p);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_bootcamp, long_texts.en_bootcamp);
+
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_open, long_texts.en_open);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_achieve_desc, long_texts.en_achieve_desc);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_ispu_prob2, long_texts.en_ispu_prob2);
+            // Replace pok&eacute;mon exactly
+            document.body.innerHTML = document.body.innerHTML.replace(/Transaksi kartu Pok(é|&eacute;)mon rawan <em>mispricing<\/em> akibat sulitnya identifikasi dari puluhan ribu varian dan ketidakpastian dalam menilai kondisi fisik kartu\./g, long_texts.en_poke_prob2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_bpa_role, long_texts.en_bpa_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_admin_role, long_texts.en_admin_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_hero_desc, long_texts.en_hero_desc);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_gpa, long_texts.en_gpa);
+            document.body.innerHTML = document.body.innerHTML.replace(/Mengerjakan <em>end-to-end<\/em> \(arsitektur, LLM agent, API backend, dan model <em>forecasting<\/em>\)\./g, long_texts.en_saku_role2);
+            document.body.innerHTML = document.body.innerHTML.replace(/Bertanggung jawab pada analisis data, merancang fitur <em>pricing<\/em> harga, dan integrasi model deteksi kondisi kartu\./g, long_texts.en_poke_role2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_edu_pens_full, long_texts.en_edu_pens_full);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_smk_full, long_texts.en_smk_full);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_skill_p_full, long_texts.en_skill_p_full);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.id_bootcamp_full, long_texts.en_bootcamp_full);
+
+        } else {
+document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_desc, long_texts.id_desc);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_about1, long_texts.id_about1);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_about2, long_texts.id_about2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_about3, long_texts.id_about3);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_contact, long_texts.id_contact);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_ispu_prob, long_texts.id_ispu_prob);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_ispu_sol, long_texts.id_ispu_sol);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_ispu_role, long_texts.id_ispu_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_poke_prob, long_texts.id_poke_prob);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_poke_sol, long_texts.id_poke_sol);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_poke_role, long_texts.id_poke_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_saku_prob, long_texts.id_saku_prob);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_saku_sol, long_texts.id_saku_sol);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_edu_pens, long_texts.id_edu_pens);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_edu_smk, long_texts.id_edu_smk);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_skill_p, long_texts.id_skill_p);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_bootcamp, long_texts.id_bootcamp);
+
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_open, long_texts.id_open);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_achieve_desc, long_texts.id_achieve_desc);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_ispu_prob2, long_texts.id_ispu_prob2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_poke_prob2, long_texts.id_poke_prob2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_bpa_role, long_texts.id_bpa_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_admin_role, long_texts.id_admin_role);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_hero_desc, long_texts.id_hero_desc);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_gpa, long_texts.id_gpa);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_saku_role2, long_texts.id_saku_role2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_poke_role2, long_texts.id_poke_role2);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_edu_pens_full, long_texts.id_edu_pens_full);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_smk_full, long_texts.id_smk_full);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_skill_p_full, long_texts.id_skill_p_full);
+            document.body.innerHTML = document.body.innerHTML.replace(long_texts.en_bootcamp_full, long_texts.id_bootcamp_full);
+
+        }
+        
+        // Update active class on buttons
+        const idBtns = document.querySelectorAll('.btn-lang-id');
+        const enBtns = document.querySelectorAll('.btn-lang-en');
+        
+        if(lang === 'en') {
+            idBtns.forEach(b => { b.classList.remove('bg-white', 'shadow-sm', 'text-primary'); b.classList.add('text-slate-500'); });
+            enBtns.forEach(b => { b.classList.add('bg-white', 'shadow-sm', 'text-primary'); b.classList.remove('text-slate-500'); });
+            document.documentElement.lang = 'en';
+        } else {
+            enBtns.forEach(b => { b.classList.remove('bg-white', 'shadow-sm', 'text-primary'); b.classList.add('text-slate-500'); });
+            idBtns.forEach(b => { b.classList.add('bg-white', 'shadow-sm', 'text-primary'); b.classList.remove('text-slate-500'); });
+            document.documentElement.lang = 'id';
+        }
+        
+        currentLang = lang;
+        
+        // Re-attach event listeners because innerHTML replacement broke them
+        attachEventListeners();
+    }
+    
+    function attachEventListeners() {
+        const idBtns = document.querySelectorAll('.btn-lang-id');
+        const enBtns = document.querySelectorAll('.btn-lang-en');
+        idBtns.forEach(b => b.onclick = (e) => { e.preventDefault(); setLang('id'); });
+        enBtns.forEach(b => b.onclick = (e) => { e.preventDefault(); setLang('en'); });
+        
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on link click
-        const mobileLinks = menu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+        if(btn) {
+            btn.onclick = () => menu.classList.toggle('hidden');
+        }
+        if(menu) {
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.onclick = () => menu.classList.add('hidden');
             });
-        });
-
-        // Auto-slide portfolio images
+        }
+        
         const sliders = document.querySelectorAll('.portfolio-slider');
         sliders.forEach(slider => {
             let scrollAmount = 0;
-            // Get all images in this slider
-            const images = slider.querySelectorAll('img');
-            if (images.length <= 1) return; // No need to slide if only 1 image
-
-            setInterval(() => {
-                // Determine the width of one image (which is 100% of the slider container)
+            if(slider.dataset.intervalId) clearInterval(slider.dataset.intervalId);
+            slider.dataset.intervalId = setInterval(() => {
                 const imgWidth = slider.clientWidth;
-                
-                // Add the width to current scroll amount
                 scrollAmount += imgWidth;
-                
-                // If we've scrolled past the last image, go back to start
                 if (scrollAmount >= slider.scrollWidth) {
                     scrollAmount = 0;
                 }
-                
-                slider.scrollTo({
-                    top: 0,
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            }, 3000); // ganti gambar tiap 3 detik
+                slider.scrollTo({ top: 0, left: scrollAmount, behavior: 'smooth' });
+            }, 3000);
         });
 
         // Profile image crossfade slider
         const profileImg1 = document.getElementById('profile-img-1');
         const profileImg2 = document.getElementById('profile-img-2');
-        let showImg1 = true;
-        
-        setInterval(() => {
-            showImg1 = !showImg1;
-            if (showImg1) {
-                profileImg1.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-                profileImg1.classList.add('opacity-100', 'scale-100');
-                profileImg2.classList.remove('opacity-100', 'scale-100');
-                profileImg2.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            } else {
-                profileImg2.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-                profileImg2.classList.add('opacity-100', 'scale-100');
-                profileImg1.classList.remove('opacity-100', 'scale-100');
-                profileImg1.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            }
-        }, 4000);
-    </script>
+        if(profileImg1 && profileImg2) {
+            if(window.profileIntervalId) clearInterval(window.profileIntervalId);
+            let showImg1 = true;
+            window.profileIntervalId = setInterval(() => {
+                showImg1 = !showImg1;
+                if (showImg1) {
+                    profileImg1.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                    profileImg1.classList.add('opacity-100', 'scale-100');
+                    profileImg2.classList.remove('opacity-100', 'scale-100');
+                    profileImg2.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                } else {
+                    profileImg2.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                    profileImg2.classList.add('opacity-100', 'scale-100');
+                    profileImg1.classList.remove('opacity-100', 'scale-100');
+                    profileImg1.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                }
+            }, 4000);
+        }
+    }
+
+    // Initial attachment
+    window.addEventListener('DOMContentLoaded', attachEventListeners);
+</script>
+
 </body>
 </html>
